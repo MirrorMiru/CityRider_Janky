@@ -24,18 +24,18 @@ houseI = loadImage("biulding.png")
 }
 
 function setup() {
-  createCanvas(windowWidth,windowHeight)
+  createCanvas(500,500)
   background("white")
   edge = createEdgeSprites()
  titles.loop();
   titles.stop()
  plays.loop();
  plays.stop();
- bg = createSprite(500,200)
+ bg = createSprite(250,250)
  bg.addImage(backg)
  bg.scale = 2
  backg.resize(windowWidth,windowHeight-150)
- grnd = createSprite(480, edge[3].y-ground.height-50)
+ grnd = createSprite(480, 50)
  grnd.addImage(ground)
  grnd.scale = 1
 ground.resize(windowWidth*2,windowHeight/7)
@@ -43,11 +43,11 @@ ground.resize(windowWidth*2,windowHeight/7)
  player.addImage(playerS)
  player.addAnimation("move",playerM)
  player.addAnimation("crash",playerC)
- title = createSprite(windowWidth/2,100)
+ title = createSprite(250,100)
  title.addImage(titlei)
- gameOver = createSprite(windowWidth/2,100)
+ gameOver = createSprite(250,100)
  gameOver.addImage(gameoI)
- restart = createSprite(windowWidth/2,200)
+ restart = createSprite(250,200)
  restart.addImage(retryI)
  restart.scale = 0.6
  jumpa = createSprite(0, grnd.y-60, windowWidth*3, 50)
@@ -212,7 +212,7 @@ function spawnBiulding() {
   
   if(frameCount % round(random(60,75)) === 0) {
     
-    var Biulding = createSprite(windowWidth+200,windowHeight/2+(round(random(10,200))),20,20);
+    var Biulding = createSprite(700,250+(round(random(10,200))),20,20);
   
     Biulding.velocityX = -(6 + 0.6*score/100);
     
