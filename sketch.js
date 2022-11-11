@@ -34,11 +34,10 @@ function setup() {
  bg = createSprite(250,250)
  bg.addImage(backg)
  bg.scale = 2
- backg.resize(windowWidth,windowHeight-150)
  grnd = createSprite(480, 50)
  grnd.addImage(ground)
  grnd.scale = 1
-ground.resize(windowWidth*2,windowHeight/7)
+ground.resize(windowWidth*2,50)
  player = createSprite(80,grnd.y-50)
  player.addImage(playerS)
  player.addAnimation("move",playerM)
